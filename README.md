@@ -3,15 +3,15 @@
  1. /bin/zookeeper-server-start ./etc/kafka/zookeeper.properties (run zookeeper)
  2. ./bin/kafka-server-start  ./etc/kafka/server.properties
 
-##To Start the mongo Source Connector
+## To Start the mongo Source Connector
 1. Start MongoDB
 2. ./bin/connect-standalone ./etc/kafka/connect-standalone.properties ./etc/mongotry.properties
 
-##To Start Redis Sink Connector
+## To Start Redis Sink Connector
 1. Start Redis
 2. ./bin/connect-standalone ./etc/kafka/connect-standalone-2.properties ./etc/redis-sink.properties
 
-##To Start the pipeline (from mongo to redis)
+## To Start the pipeline (from mongo to redis)
 1.  Start Mongo and Redis
 2.  ./bin/connect-standalone ./etc/kafka/connect-standalone.properties ./etc/mongo.properties ./etc/redis-sink.properties
 
