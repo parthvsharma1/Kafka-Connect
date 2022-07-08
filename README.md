@@ -1,5 +1,5 @@
 # Kafka-Connect
- ##To run the Kafka Cluster
+ ## To run the Kafka Cluster
  1. /bin/zookeeper-server-start ./etc/kafka/zookeeper.properties (run zookeeper)
  2. ./bin/kafka-server-start  ./etc/kafka/server.properties
 
@@ -28,4 +28,5 @@
 --property value.schema='{"type”:”object”}’ \
 --property parse.key=true \
 --property key.schema='{"type":"string"}'
+  * PS :the property value and key schemas can be changes according to you
 
