@@ -1,21 +1,26 @@
 # Kafka-Connect
  ## To run the Kafka Cluster
+````
  1. /bin/zookeeper-server-start ./etc/kafka/zookeeper.properties (run zookeeper)
  2. ./bin/kafka-server-start  ./etc/kafka/server.properties
-
+````
 ## To Start the mongo Source Connector
+```
 1. Start MongoDB
 2. ./bin/connect-standalone ./etc/kafka/connect-standalone.properties <Config Directory>/MongoSourceConnector.properties
-
+```
 ## To Start Redis Sink Connector
+````
 1. Start Redis
 2. ./bin/connect-standalone ./etc/kafka/connect-standalone-2.properties <Config Directory>/RedisSink.properties
-
-## To Start the pipeline (from mongo to redis)
-1.  Start Mongo, Redis and ES
-2.  ./bin/connect-standalone ./etc/kafka/connect-standalone.properties <Config Directory>/MongoSourceConnector.properties <Config Directory>/RedisSink.properties <Config Directory>/quickstart-elasticsearch.properties
-
+````
+## To Start the pipeline (from mongo to redis) 
+````
+1. Start Mongo, Redis and ES
+2. ./bin/connect-standalone ./etc/kafka/connect-standalone.properties <Config Directory>/MongoSourceConnector.properties <Config Directory>/RedisSink.properties <Config Directory>/quickstart-elasticsearch.properties
+````
 ## To Start Console Producer/Consumer
+````
 1. ./bin/kafka-json-schema-console-producer \
 --broker-list localhost:9092 --topic topicName \
 --property value.schema='{"type”:”object”}’ \
@@ -29,4 +34,4 @@
 --property parse.key=true \
 --property key.schema='{"type":"string"}'
   * PS :the property value and key schemas can be changes according to you
-
+````
