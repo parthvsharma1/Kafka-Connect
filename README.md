@@ -5,15 +5,15 @@
 
 ## To Start the mongo Source Connector
 1. Start MongoDB
-2. ./bin/connect-standalone ./etc/kafka/connect-standalone.properties ./etc/mongotry.properties
+2. ./bin/connect-standalone ./etc/kafka/connect-standalone.properties <Config Directory>/MongoSourceConnector.properties
 
 ## To Start Redis Sink Connector
 1. Start Redis
-2. ./bin/connect-standalone ./etc/kafka/connect-standalone-2.properties ./etc/redis-sink.properties
+2. ./bin/connect-standalone ./etc/kafka/connect-standalone-2.properties <Config Directory>/RedisSink.properties
 
 ## To Start the pipeline (from mongo to redis)
-1.  Start Mongo and Redis
-2.  ./bin/connect-standalone ./etc/kafka/connect-standalone.properties ./etc/mongo.properties ./etc/redis-sink.properties
+1.  Start Mongo, Redis and ES
+2.  ./bin/connect-standalone ./etc/kafka/connect-standalone.properties <Config Directory>/MongoSourceConnector.properties <Config Directory>/RedisSink.properties <Config Directory>/quickstart-elasticsearch.properties
 
 ## To Start Console Producer/Consumer
 1. ./bin/kafka-json-schema-console-producer \
