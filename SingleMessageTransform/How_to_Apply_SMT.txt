@@ -1,0 +1,2 @@
+To apply this or any other smt , create a jar file for the custom smt.
+Add this jar to the plugin.path in connect-standalone.properties
